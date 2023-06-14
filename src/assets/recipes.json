@@ -1,0 +1,6 @@
+[
+    {"name": "Apple Pie", "ingredients": ["1 kg Apples", "500 g Sugar", "2 cups Flour"], "img": "./assets/img/apple_pie.jpg"},
+    {"name": "Sugar Cookies", "ingredients": ["500 g Sugar", "2 cups Flour", "1 Egg"], "img": "./assets/img/sugar_cookies.jpg"},
+    {"name": "Pancakes", "ingredients": ["2 cups Flour", "1 Egg", "1 cup Milk"], "img": "./assets/img/pancakes.jpg"}
+
+]

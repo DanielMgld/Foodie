@@ -1,0 +1,37 @@
+body {
+    overflow: auto;
+  }
+  
+  .admin-dashboard {
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    margin-bottom: 50px;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .ingredient {
+    padding: 10px 0;
+  }
+  
+  .unauthorized {
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    height: 100vh;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.edit-button{
+    margin-right: 10px;
+}

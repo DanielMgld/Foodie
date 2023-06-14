@@ -1,0 +1,18 @@
+<body>
+    <div class="recipes-list">
+        <h1><b>Recipes</b></h1>
+        <div *ngFor="let recipe of recipes | async" class="recipe">
+          <img [src]="recipe.img" alt="Image Not Found :(">
+          <h3><b>{{ recipe.name }}</b></h3>
+          <ul>
+            <li *ngFor="let ingredient of recipe.ingredients">{{ getIngredientNameById(ingredient.id) }} ({{ ingredient.q }} g)</li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel sem vel dolor lacinia ultricies. Pellentesque venenatis porta nibh sit amet eleifend. Curabitur eu luctus tortor. Maecenas quis molestie lacus. Donec pulvinar suscipit varius. Praesent convallis rhoncus consequat. Sed sollicitudin tortor blandit, posuere turpis a, hendrerit nisi. Curabitur eleifend risus quis dapibus laoreet. Ut aliquet ornare sem eget fermentum. Nam dictum pulvinar mauris nec cursus. Vivamus id auctor sem. Vestibulum feugiat interdum mauris id imperdiet. Vestibulum feugiat, libero id euismod tempor, arcu tortor ultrices nunc, id vestibulum orci velit nec sapien. Donec ornare ornare magna ut malesuada. In tincidunt quam nunc, in tincidunt erat auctor at.</p>
+          <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris gravida nulla lectus, et pellentesque nibh lobortis ac. Quisque ut orci in ligula malesuada sodales vel at elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec porta cursus lacus in tristique. Cras sagittis tristique neque. Aliquam erat volutpat. Sed facilisis, sapien porttitor molestie volutpat, arcu nisi ultricies risus, id pulvinar erat ipsum ut lectus. Donec condimentum volutpat lorem ac ultricies. Sed sit amet imperdiet ante. Fusce vel nibh vestibulum, lacinia lectus et, pretium lectus. Proin ipsum purus, fermentum in justo vel, pellentesque pulvinar orci. Etiam interdum felis quam. In non vehicula augue</p>
+          <div class="recipe-footer">
+            <h4 class="recipe-cost"><b>Total Price: {{ getTotalCost(recipe.ingredients) }} Ft</b></h4>
+            <button mat-raised-button color="primary" (click)="addToCart(recipe)" class="recipe-add-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </body>

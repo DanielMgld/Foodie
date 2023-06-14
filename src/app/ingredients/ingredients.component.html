@@ -1,0 +1,11 @@
+<body>
+  <div class="ingredients-list">
+    <h1>Ingredients</h1>
+    <div class="ingredientsBox">
+      <div *ngFor="let ingredient of ingredients | async" class="ingredient">
+        <p><b>{{ ingredient.name }}</b></p>
+        <img src="{{ ingredient.img }}" alt="Image Not Found :(" (click)="openDialog(ingredient)">
+      </div>
+    </div>
+  </div>
+</body>

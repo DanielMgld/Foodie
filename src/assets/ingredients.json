@@ -1,0 +1,46 @@
+[
+    {
+        "name": "Apple",
+         "img": "./assets/img/apple.jpg",
+         "options":[
+            {"q": "500", "price":"1200"},
+            {"q":"1000", "price": "2300"}
+         ]
+    },
+    
+    {
+        "name": "Cheese",
+        "img": "./assets/img/cheese.jpg",
+        "options":[
+            {"q":"250", "price":"820"},
+            {"q":"500", "price":"1500"}
+        ]
+    },
+
+    {
+        "name": "Sugar", 
+        "img": "./assets/img/sugar.jpg",
+        "options":[
+            {"q":"500","price":"290"},
+            {"q":"1000","price":"550"}
+        ]
+    },
+
+    {
+        "name": "Flour", 
+        "img": "./assets/img/flour.jpg",
+        "options":[
+            {"q":"1000","price":"550"},
+            {"q":"2000","price":"1000"}
+        ]
+    },
+
+    {
+        "name": "Corn", 
+        "img": "./assets/img/corn.jpg",
+        "options":[
+            {"q":"200","price":"499"},
+            {"q":"400","price":"900"}
+        ]
+    }
+]

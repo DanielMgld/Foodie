@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>{{ingredient.name}}</h1>
+<div mat-dialog-content>
+  <div class="ingredient-img"><img [src]="ingredient.img" alt="Image Not Found :(" style="width: 200px; height: 200px;"></div>
+  <div>
+    <div><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa reiciendis, cumque veniam blanditiis eos maiores.</p>
+    </div>
+    <div class="quantity-buttons">
+      <p *ngFor="let option of ingredient.options">
+        <button mat-button [color]="option === selectedOption ? 'primary' : ''" (click)="selectOption(option)">
+          {{option.q}} g
+        </button>
+      </p>
+    </div>
+    <p *ngIf="selectedOption"><b>Price: {{selectedOption.price}} Ft</b></p>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-raised-button color="primary" [disabled]="!selectedOption" (click)="addToCart()">Add to Cart</button>
+</div>

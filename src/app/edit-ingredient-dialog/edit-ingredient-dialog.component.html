@@ -1,0 +1,34 @@
+<h2>Edit Ingredient</h2>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" placeholder="Name">
+    </mat-form-field>
+
+    <div formGroupName="option1">
+      <mat-form-field>
+        <input matInput formControlName="q" placeholder="Quantity 1">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Price 1</mat-label>
+        <input matInput formControlName="price" placeholder="Quantity 1's Price">
+      </mat-form-field>
+    </div>
+
+    <div formGroupName="option2">
+      <mat-form-field>
+        <input matInput formControlName="q" placeholder="Quantity 2">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="price" placeholder="Quantity 2's Price">
+      </mat-form-field>
+    </div>
+  </mat-dialog-content>
+  <p>Images are cool, but you can't give us more of them (yet).</p>
+  <mat-dialog-actions align="end">
+    <button mat-button type="submit" cdkFocusInitial>Edit</button>
+  </mat-dialog-actions>
+</form>

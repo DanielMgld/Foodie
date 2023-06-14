@@ -1,0 +1,27 @@
+.welcome {
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+  }
+  h2{
+    margin-top: 90px;
+    font-size: 40px;
+  }
+  p {
+    font-size: 20px;
+    padding: 6px;
+  }
+.welcome h2, .welcome p {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0);
+}
+.button-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+.tinylist{
+    padding-bottom: 25px;
+}

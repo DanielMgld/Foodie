@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  justify-content: center;
+  padding: 2em 0;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.checkout-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 70%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: transparent;
+}
+
+.cart-items, .checkout-form {
+  padding: 2em;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.cart-items {
+  border-right: 1px solid #dddddd;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+  padding: 0.5em 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  margin-top: 10px;
+}

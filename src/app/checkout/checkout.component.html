@@ -1,0 +1,43 @@
+<div class="checkout-container">
+  <div class="cart-items">
+    <h2>Your Cart</h2>
+    <div *ngIf="(cartItems$ | async)?.length; else noItems">
+      <div *ngFor="let item of cartItems$ | async; let i = index" class="cart-item">
+        <p>{{ item.name }} ({{item.q}} g)</p>
+        <p>{{ item.price }} Ft</p>
+        <form [formGroup]="quantitiesForm">
+          <input type="number" [formControlName]="i.toString()" min="1">
+        </form>
+        <button (click)="removeFromCart(item, i)">X</button>
+      </div>
+    </div>
+    <ng-template #noItems>
+      <p>You don't have any items in your cart.</p>
+    </ng-template>
+    <div *ngIf="cartTotal$ | async as cartTotal">
+      <h2>Total: {{ cartTotal }} Ft</h2>
+    </div>
+  </div>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)" class="checkout-form">    
+    <div>
+      <label for="name">
+        Name:
+        <input id="name" type="text" formControlName="name">
+      </label>
+    </div>
+    <div>
+      <label for="address">
+        Address:
+        <input id="address" type="text" formControlName="address">
+      </label>
+    </div>
+    <div>
+      <label for="email">
+        Email:
+        <input id="email" type="text" formControlName="email">
+      </label>
+    </div>
+    
+    <button type="submit" mat-raised-button color="primary" [disabled]="!checkoutForm.valid">Order</button>
+  </form>
+</div>

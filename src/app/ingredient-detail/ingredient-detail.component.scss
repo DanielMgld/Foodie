@@ -1,0 +1,19 @@
+img{
+    width:100px;
+    height: 100px;
+}
+.ingredient-img{
+    text-align: center;
+}
+.quantity-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  button.mat-button {
+    margin-right: 10px;
+  }
+  
+  button.mat-button:last-child {
+    margin-right: 0;
+  }

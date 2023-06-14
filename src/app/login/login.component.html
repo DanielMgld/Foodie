@@ -1,0 +1,28 @@
+<body>
+  <div *ngIf="isLoggedIn" class="admin-dashboard">
+    <h1>Admin Dashboard</h1>
+
+    <div class="section">
+      <h2>Ingredients</h2>
+      <div *ngFor="let ingredient of ingredients | async" class="ingredient">
+        <p><b>{{ ingredient.name }}</b></p>
+        <button mat-raised-button color="primary" class="edit-button">Edit</button>
+        <button mat-raised-button color="warn">Delete</button>
+      </div>
+      <button mat-raised-button (click)="addIngredient()">Add Ingredient</button>
+    </div>
+
+    <div class="section">
+      <h2>Recipes</h2>
+      <div class="recipe">
+        <p>You are currently unable to edit recipes. Sorry about that!</p>
+        <!--<button mat-button (click)="editRecipe(recipe)">Edit</button>
+        <button mat-button (click)="deleteRecipe(recipe)">Delete</button>
+      </div>
+      <button mat-button (click)="addRecipe()">Add Recipe</button> -->
+    </div>
+  </div>
+
+  <div *ngIf="!isLoggedIn" class="unauthorized">
+    <h2>You Shouldn't Be Here..</h2>
+  </div>
